@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>MyCoolApp</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+
+		<param-name>Company_Name</param-name>
+		<param-value>HefShine</param-value>
+
+	</context-param>
+
+	<servlet>
+		<description></description>
+		<display-name>Greetings</display-name>
+		<servlet-name>Greetings</servlet-name>
+		<servlet-class>com.hefshine.servlet.Greetings</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Greetings</servlet-name>
+		<url-pattern>/Greetings</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Welcome</display-name>
+		<servlet-name>Welcome</servlet-name>
+		<servlet-class>com.hefshine.servlet.Welcome</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Welcome</servlet-name>
+		<url-pattern>/Welcome</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Maths</display-name>
+		<servlet-name>Maths</servlet-name>
+		<servlet-class>com.hefshine.servlet.Maths</servlet-class>
+		<init-param>
+
+			<param-name>PI</param-name>
+			<param-value>3.1416</param-value>
+
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Maths</servlet-name>
+		<url-pattern>/Maths</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>LoginServlet</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.hefshine.servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>RegisterServlet</display-name>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.hefshine.servlet.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/RegisterServlet</url-pattern>
+	</servlet-mapping>
+	<filter>
+		<display-name>LoginFilter</display-name>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>com.hefshine.filters.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/LoginFilter</url-pattern>
+	</filter-mapping>
+</web-app>

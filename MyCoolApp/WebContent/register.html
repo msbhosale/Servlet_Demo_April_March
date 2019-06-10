@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Form</title>
+</head>
+<body>
+
+	<form action="RegisterServlet" method="post">	
+		User name <input type="text" name="username">
+		<br>
+		Password <input type="password" name="password">
+		<br>
+		Gender
+		<input type="radio" name="gender" value="male"> Male
+		<input type="radio" name="gender" value="female"> Female
+		<br>	
+		Subject	
+		<select name="subject">	
+			<option value="java">Java</option>
+			<option value="j2ee">Advanced Java</option>
+			<option value="spring">Spring</option>
+			<option value="hibernate">Hibernate</option>	
+		</select>
+		<br>	
+		Hobbies	
+		<br>
+		<input type="checkbox" name="hobbies" value="Reading"> Reading
+		<br>
+		<input type="checkbox" name="hobbies" value="Painting"> Painting
+		<br>
+		<input type="checkbox" name="hobbies" value="Coding"> Coding	
+		<br>	
+		<input type="submit" value="Register">	
+	</form>
+
+</body>
+</html>
